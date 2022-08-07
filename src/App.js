@@ -1,45 +1,45 @@
 import logo from './logo.svg';
 import './App.css';
-import Keyboard from 'react-simple-keyboard';
 import 'react-simple-keyboard/build/css/index.css';
-import { useState, useEffect } from 'react';
-import { collection, getDocs } from "firebase/firestore";
-import db from './firebase/firebaseConfig.js';
-import { async } from '@firebase/util';
+import TableCell, { tableCellClasses } from '@mui/material/TableCell';
+import { Button, Container } from '@material-ui/core';
+
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import Teclado from './Teclado/Teclado.js';
+import Tabla from './Tabla/Tabla';
 
 
 function App() {
-  const nose = useEffect(() => {
+ 
 
-      const obtenerDatos = async() =>{
-          const datos = await getDocs(collection(db,'usuarios'));
-          console.log(datos.docs[0].data());
+  return (
 
-      }
+    <>
+    <Teclado></Teclado>
+      <Button variant="contained">Soy unbutton</Button>
+      <TableCell></TableCell>
+      <Container>
+        <Box
+          component="form"
+          sx={{
+            '& > :not(style)': { m: 1, width: '25ch' },
+          }}
+          noValidate
+          autoComplete="off"
+        >
+          <TextField id="outlined-basic" variant="outlined" />
+        </Box>
+        <Tabla></Tabla>
+      </Container>
 
-      obtenerDatos();
-  }, []);
-  const [palabra, setPalabra] = useState('ssssss');
-  const onChange = (input) => {
-    console.log("Input changed", input);
-    setPalabra(input); 
-  }
+    </>
 
-  const onKeyPress = (button) => {
-    console.log("Button pressed", button);
-  }
 
-    return (
-      <>
-      <p>{palabra}</p>
-      <p>{nose}</p>
-      <Keyboard
-        onChange={onChange}
-        onKeyPress={onKeyPress}
-      />
-      </>
-    );
-  
+  );
+
 }
+
+
 
 export default App;

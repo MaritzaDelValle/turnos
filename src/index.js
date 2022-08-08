@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Inicio from './Pages/Inicio';
 import Principal from './Principal/Principal';
+import Cliente from './Cliente/Cliente';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
@@ -14,6 +15,7 @@ root.render(
   <Routes>
       <Route path="/" element={<App />} />
       <Route path="Inicio" element={<Inicio />} />
+      <Route path="Cliente" element={<Cliente />} />
     </Routes>
     </Principal>
   </React.StrictMode>

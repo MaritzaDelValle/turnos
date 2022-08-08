@@ -1,0 +1,23 @@
+.tarjeta{
+    margin-top: 2vh;
+    width: 45%;
+    float: left;
+    align-items: baseline;
+    display: flex;
+    border: 1px solid rgb(209, 196, 196);
+    margin-left: 3%;
+    min-height: 47vh;
+    background-color: #F5C7A9!important
+}
+.tarjeta_contenido{
+    
+    align-items: center;
+    display: block;
+    margin: auto;
+}
+.tarjeta_titulos{
+    font-variant: normal;
+}
+body{
+    background-color: #411530;
+}

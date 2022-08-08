@@ -9,7 +9,9 @@
   user-select: none;
   transition: bottom 0.4s;
 }
-
+body{
+  background-color: #411530;
+}
 .keyboard--hidden {
   bottom: -100%;
 }

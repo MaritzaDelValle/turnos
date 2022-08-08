@@ -7,6 +7,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Inicio from './Pages/Inicio';
 import Principal from './Principal/Principal';
 import Cliente from './Cliente/Cliente';
+import Login from './firebase/Login';
+import Register from './firebase/Register';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
@@ -16,6 +18,8 @@ root.render(
       <Route path="/" element={<App />} />
       <Route path="Inicio" element={<Inicio />} />
       <Route path="Cliente" element={<Cliente />} />
+      <Route path="Register" element={<Register/>} />
+      <Route path='Login' element={<Login/>} />
     </Routes>
     </Principal>
   </React.StrictMode>
